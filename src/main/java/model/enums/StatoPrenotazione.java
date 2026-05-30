@@ -1,4 +1,4 @@
-package model;
+package model.enums;
 
 public enum StatoPrenotazione {
     IN_ATTESA,

@@ -1,28 +1,21 @@
 package main;
 
-import controller.TavoloController;
-import gui.TavoloPanel;
-
-import javax.swing.*;
+import controller.Controller;
+import gui.MainFrame;
+import javax.swing.SwingUtilities;
 
 public class Main {
     public static void main(String[] args) {
 
-        // 1. Creiamo il controller
-        TavoloController tavoloController = new TavoloController();
+        // Usiamo invoekLater() per assicurarci che la finestra venga creata in modo sicuro evitando crash improvvisi
+        SwingUtilities.invokeLater(() -> {
 
-        // 2. Creiamo il panel passandogli il controller
-        TavoloPanel tavoloPanel = new TavoloPanel(tavoloController);
+            // Creiamo il controller
+            Controller controller = new Controller();
 
-        // 3. Creiamo la finestra principale
-        JFrame frame = new JFrame("Gestione Ristorante");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 400);
+            // Creiamo il MainFrame passando il controller in modo che possa interagire con la logica del programma
+            new MainFrame(controller);
 
-        // 4. Aggiungiamo il panel alla finestra
-        frame.add(tavoloPanel.getMainPanel());
-
-        // 5. Rendiamo visibile la finestra
-        frame.setVisible(true);
+        });
     }
 }

@@ -1,7 +1,7 @@
-package model;
+package model.enums;
 
 public enum PosizioneTavolo {
-    SALA_INTERNA,
+    INTERNO,
     ESTERNO,
     BAR
 }

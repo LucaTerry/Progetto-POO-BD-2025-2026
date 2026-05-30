@@ -1,8 +1,8 @@
 package model;
 
-import java.util.ArrayList;
+import model.enums.RuoloDipendente;
+
 import java.util.Date;
-import java.util.List;
 
 
 public class Dipendente extends Persona{

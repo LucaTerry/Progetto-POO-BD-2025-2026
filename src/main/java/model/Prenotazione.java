@@ -1,5 +1,7 @@
 package model;
 
+import model.enums.StatoPrenotazione;
+
 import java.time.LocalDateTime;
 
 public class Prenotazione {
